@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据中台系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .platform-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .platform-card h2 {
+            color: #4a90e2;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .platform-card ul {
+            list-style-type: none;
+            margin-left: 10px;
+        }
+        
+        .platform-card li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .platform-card li:before {
+            content: "•";
+            color: #4a90e2;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .api-test {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        
+        .api-test h2 {
+            color: #4a90e2;
+            margin-bottom: 15px;
+        }
+        
+        .test-button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+        
+        .test-button:hover {
+            background-color: #357abd;
+        }
+        
+        .response {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>数据中台系统</h1>
+            <p class="subtitle">统一数据能力，释放数据价值</p>
+        </header>
+        
+        <div class="platform-grid">
+            <div class="platform-card">
+                <h2>数据源平台</h2>
+                <ul>
+                    <li>多数据源连接管理</li>
+                    <li>SQL编辑器与执行</li>
+                    <li>数据可视化查询</li>
+                    <li>数据源权限控制</li>
+                </ul>
+            </div>
+            
+            <div class="platform-card">
+                <h2>数据库同步平台</h2>
+                <ul>
+                    <li>多源数据同步任务管理</li>
+                    <li>实时/批量同步模式</li>
+                    <li>数据一致性校验</li>
+                    <li>同步任务监控与告警</li>
+                </ul>
+            </div>
+            
+            <div class="platform-card">
+                <h2>数据中枢平台</h2>
+                <ul>
+                    <li>元数据管理与目录</li>
+                    <li>数据血缘分析</li>
+                    <li>数据质量评估</li>
+                    <li>数据资产标签管理</li>
+                </ul>
+            </div>
+            
+            <div class="platform-card">
+                <h2>数据汇聚平台</h2>
+                <ul>
+                    <li>数据源连接器管理</li>
+                    <li>ETL任务设计与调度</li>
+                    <li>数据转换规则配置</li>
+                    <li>实时数据采集</li>
+                </ul>
+            </div>
+            
+            <div class="platform-card">
+                <h2>数据存储平台</h2>
+                <ul>
+                    <li>集群管理与调度</li>
+                    <li>资源监控与优化</li>
+                    <li>存储策略配置</li>
+                    <li>数据生命周期管理</li>
+                </ul>
+            </div>
+            
+            <div class="platform-card">
+                <h2>数据分析平台</h2>
+                <ul>
+                    <li>OLAP多维分析</li>
+                    <li>预计算立方体管理</li>
+                    <li>数据湖格式管理</li>
+                    <li>流批一体处理</li>
+                </ul>
+            </div>
+            
+            <div class="platform-card">
+                <h2>数据开发平台</h2>
+                <ul>
+                    <li>流处理作业开发</li>
+                    <li>实时数据管道设计</li>
+                    <li>可视化作业编辑器</li>
+                    <li>代码智能提示</li>
+                </ul>
+            </div>
+            
+            <div class="platform-card">
+                <h2>统一服务层</h2>
+                <ul>
+                    <li>API网关</li>
+                    <li>权限管理</li>
+                    <li>监控告警</li>
+                    <li>安全认证</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="api-test">
+            <h2>API测试</h2>
+            <button class="test-button" onclick="testHealthCheck()">测试健康检查</button>
+            <button class="test-button" onclick="testGetDatasources()">获取数据源列表</button>
+            <button class="test-button" onclick="testGetSyncTasks()">获取同步任务列表</button>
+            <button class="test-button" onclick="testGetMonitor()">获取监控数据</button>
+            <div class="response" id="response"></div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2026 数据中台项目. 保留所有权利.</p>
+        </footer>
+    </div>
+    
+    <script>
+        async function testHealthCheck() {
+            const response = await fetch('http://localhost:8000/health');
+            const data = await response.json();
+            document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+        }
+        
+        async function testGetDatasources() {
+            const response = await fetch('http://localhost:8000/api/datasource');
+            const data = await response.json();
+            document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+        }
+        
+        async function testGetSyncTasks() {
+            const response = await fetch('http://localhost:8000/api/sync/task');
+            const data = await response.json();
+            document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+        }
+        
+        async function testGetMonitor() {
+            const response = await fetch('http://localhost:8000/api/service/monitor');
+            const data = await response.json();
+            document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+</html>

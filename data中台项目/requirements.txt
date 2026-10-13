@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pydantic-settings
+requests
+psycopg2-binary
+redis
+pymongo
+elasticsearch
+kafka-python
+celery
+prometheus-client
+python-jose[cryptography]
+python-multipart
+websockets
